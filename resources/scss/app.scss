@@ -1,0 +1,130 @@
+@import '~bootstrap/scss/bootstrap';
+
+header{
+    height: 80px;
+    background-color:#2F2E4B;
+    box-shadow: 5px 5px 5px black;
+    z-index: 4;
+
+    ul {
+        li{
+            .nav-link{
+                color: #8e91ab !important;
+                text-decoration: none !important;
+                font-size: 18px !important;
+                font-weight: 600 !important;
+
+                &:hover{
+                    color: #736EFB !important;
+                    text-decoration: none;
+                }
+            }
+        }
+    };
+
+
+    .logo-a{
+        height: 100%;
+
+        .logo_laravel{
+            height: 100%;
+
+            img{
+                height: 100%;
+            }
+        }
+    }
+
+}
+
+aside{
+    height: 100%;
+    width: 200px;
+    background-color: #232538;
+    box-shadow: inset 0 5px 9px -5px  black;
+
+    nav{
+        ul{
+            list-style: none;
+            width: 100%;
+            padding: 0px;
+            margin: 0px;
+
+            a{
+                color: #8e91ab;
+                text-decoration: none;
+                width: 100%;
+                font-size: 18px;
+
+                &:hover{
+                    color: #736EFB;
+                    text-decoration: none;
+
+                    li{
+                        background-color: #1D1E2F;
+                    }
+                }
+
+                li{
+                    width: 100%;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    flex-direction: column;
+                    padding: 20%;
+
+                    i{
+                        font-size: 30px;
+                        display: block;
+                    }
+
+                    span{
+                        display: block;
+                    }
+                }
+            }
+
+        }
+    }
+}
+
+.main-wrapper{
+    height: calc(100vh - 80px);
+}
+
+main{
+    background-color: #26273D !important;
+    box-shadow: inset 5px 5px 9px -5px  black;
+
+    h2,
+    h1,
+    h3,
+    h4,
+    h5,
+    h6{
+        color: #8e91ab !important;
+    }
+
+    span{
+        color: white;
+    }
+}
+
+.ck-editor__editable_inline {
+    min-height: 300px;
+}
+
+.fa-brands{
+    font-size: 30px !important;
+    padding-right: 5px;
+}
+
+.btn-outline-primary {
+    margin-right: 20px;
+    border-radius: 0%;
+    --bs-btn-color: #ffffff;
+    --bs-btn-border-color: #ffffff;
+    --bs-btn-active-color: #000000;
+    --bs-btn-active-bg: #ffffff;
+    --bs-btn-active-border-color: #ffffff;
+}

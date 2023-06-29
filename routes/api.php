@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\Api\LeadController;
 use App\Http\Controllers\Api\ProjectController;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
@@ -29,4 +30,11 @@ Route::namespace('Api')
         ->prefix('projects')
         ->group(function(){
             Route::get('/', [ProjectController::class, 'index']);
+            Route::get('/kinds', [ProjectController::class, 'getKinds']);
+            Route::get('/technologies', [ProjectController::class, 'getTechnologies']);
+            Route::get('/projects-kinds/{id}', [ProjectController::class, 'getFilteredKind']);
+            Route::get('/projects-technologies/{id}', [ProjectController::class, 'getFilteredTechnology']);
+            Route::get('/{slug}', [ProjectController::class, 'getDetailProject']);
         });
+
+Route::post('/contacts', [LeadController::class, 'store']);
